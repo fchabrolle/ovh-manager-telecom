@@ -180,9 +180,6 @@ module.exports = function (grunt) {
         //##            For ES6 support                                                        ##
         //#######################################################################################
         babel: {
-            options: {
-                presets: ["es2015"]
-            },
             dist: {
                 files: [{
                     expand: true,
@@ -820,9 +817,9 @@ module.exports = function (grunt) {
                 name: "managerApp",
                 dest: "<%= yeoman.client %>/app/config/custom.js",
                 serializerOptions: {
-                    indent: "    ",
+                    indent: "  ",
                     no_trailing_comma: true,
-                    quote: "\""
+                    quote: "\'"
                 },
                 template: grunt.file.read("./tasks/constant.tpl.ejs"),
                 constants: {
